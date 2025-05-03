@@ -5,3 +5,5 @@ resources/
 
 # System files
 .DS_Store
+
+.idea/
