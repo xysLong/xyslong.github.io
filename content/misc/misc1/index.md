@@ -22,5 +22,5 @@ The reference point for all calculations was Monday, January 13, 2025, at 9:00 A
 The full-resolution visuals can be downloaded here: [PDF (1.3 MB)](Travel_Time_20250113.pdf)
 
 After spending hours finalizing the visuals, it hit me:
-commute time isn’t even that important to me.
-I don’t go to the office that often, so optimizing for travel time actually doesn’t make much sense 😄
+commute time isn't even that important to me.
+I don't go to the office that often, so optimizing for travel time actually doesn't make much sense 😄
