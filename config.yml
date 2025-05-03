@@ -60,7 +60,7 @@ params:
               url: https://crea.univie.ac.at/
             - name: VDS CoBeNe
               url: https://vds-cobene.univie.ac.at/
-            - name: Misc
+            - name: Miscellaneous
               url: misc/
 
     socialIcons:
