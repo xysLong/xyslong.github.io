@@ -16,9 +16,12 @@ menu:
         - name: Location
           url: location/
           weight: 3
+        - name: Research
+          url: research/
+          weight: 3
 
 params:
-    description: "I'm a PhD student in Cognitive Science at the University of Vienna."
+    description: "I am a PhD student in Cognitive Science at the University of Vienna."
     author: Xingyu Long
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
@@ -33,7 +36,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["Misc","Location"]
+    MainSections: ["Misc","Location","Research"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -44,11 +47,13 @@ params:
     profileMode:
           enabled: true
           title: Xingyu Long
-          subtitle: "I'm a PhD student in Cognitive Science at the University of Vienna. Here, I investigate visual perception in collaboration with art historians and psychologists."
+          subtitle: "My name is Xingyu Long (龙星羽) and I am a PhD student in Cognitive Science at the University of Vienna, where I investigate visual perception in collaboration with art historians and psychologists."
           imageUrl: "picture.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
+            - name: Research
+              url: research/
             - name: Teaching
               url: https://ufind.univie.ac.at/en/person.html?id=1012161/
             - name: CReA Lab
