@@ -10,21 +10,15 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
-          weight: 2
-        - name: Courses
-          url: courses/
+        - name: Miscellaneous
+          url: misc/
+          weight: 5
+        - name: Location
+          url: location/
           weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
 
 params:
-    description: "Lorem ipsum."
+    description: "I'm a PhD student in Cognitive Science at the University of Vienna."
     author: Xingyu Long
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
@@ -39,7 +33,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
+    MainSections: ["Misc","Location"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -50,33 +44,31 @@ params:
     profileMode:
           enabled: true
           title: Xingyu Long
-          subtitle: "Lorem ipsum"
-          imageUrl: "picture.jpeg"
+          subtitle: "I'm a PhD student in Cognitive Science at the University of Vienna. Here, I investigate visual perception in collaboration with art historians and psychologists."
+          imageUrl: "picture.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Papers
-              url: papers/
-            - name: Courses
-              url: courses/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
+            - name: Teaching
+              url: https://ufind.univie.ac.at/en/person.html?id=1012161/
+            - name: CReA Lab
+              url: https://crea.univie.ac.at/
+            - name: VDS CoBeNe
+              url: https://vds-cobene.univie.ac.at/
+            - name: Misc
+              url: misc/
 
     socialIcons:
-        - name: CV
+        - name: LinkedIn
           url: https://www.linkedin.com/in/xingyu-long-15b198105/
         - name: Email
           url: mailto:xingyu.long@univie.ac.at
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=I3P7fhgAAAAJ
+          url: https://scholar.google.com/citations?user=I3P7fhgAAAAJ/
         - name: GitHub
-          url: https://github.com/xyslong
+          url: https://github.com/xyslong/
+        - name: Location
+          url: location/
 
     assets:
         disableScrollBarStyle: true
