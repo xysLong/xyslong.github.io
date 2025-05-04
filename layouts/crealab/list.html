@@ -1,0 +1,151 @@
+{{ define "main" }}
+
+<div class="lab-intro-wrapper">
+  <div class="lab-intro-text">
+    {{ .Content }}
+  </div>
+  <div class="lab-intro-logo">
+    <img src="/images/crealab/CREA_LOGO_RGB13.png" alt="Lab Logo">
+  </div>
+</div>
+
+<style>
+    .lab-intro-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .lab-intro-text {
+      flex: 1 1 65%;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .lab-intro-text small {
+      display: block;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    .lab-intro-logo {
+      flex: 1 1 30%;
+      text-align: center;
+    }
+
+    .lab-intro-logo img {
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+  .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .lab-member {
+    width: 220px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  .lab-member a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lab-member img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+    transition: transform 0.3s ease;
+  }
+
+  .lab-member h3 {
+    color: #2daa68;
+    margin: 0.2rem 0 0.2rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .lab-member p {
+    font-size: 0.9rem;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  .lab-member:hover h3,
+  .lab-member:hover p {
+    color: #0066cc;
+  }
+
+  .lab-member:hover img {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .lab-grid {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .lab-member {
+      width: 180px;
+    }
+    .lab-member img {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  .lab-section-title {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+</style>
+
+{{ $all := site.Data.crealab }}
+{{ $statuses := slice "Current" "Former" }}
+{{ $titles := dict "Current" "Current Members" "Former" "Affiliated and Former Members" }}
+
+{{ range $status := $statuses }}
+  <h2 class="lab-section-title">{{ index $titles $status }}</h2>
+  <section class="lab-grid" id="lab-{{ $status | urlize }}">
+    {{ range shuffle (where $all "status" $status) }}
+    <div class="lab-member">
+      <a href="{{ .website }}" target="_blank" rel="noopener">
+        <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
+        <h3>{{ .name }}</h3>
+        <p>{{ .focus }}</p>
+      </a>
+    </div>
+    {{ end }}
+  </section>
+{{ end }}
+
+<script>
+  document.querySelectorAll('.lab-grid').forEach(section => {
+    const items = Array.from(section.children);
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    items.forEach(el => section.appendChild(el));
+  });
+</script>
+{{ end }}
