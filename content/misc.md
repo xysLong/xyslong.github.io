@@ -1,12 +1,12 @@
 ---
-title: "Communities"
+title: "Miscellaneous"
 date: 2025-05-04
 hidemeta: true
-description: "Communities."
+description: "Miscellaneous"
 ---
 
 <div style="margin-top: 2rem; margin-bottom: 1rem;">
-  <h3 style="font-weight: 600; border-bottom: 2px solid #eee; padding-bottom: 0.3em;">Research & Work</h3>
+  <h3 style="font-weight: 600; border-bottom: 2px solid #eee; padding-bottom: 0.3em;">Communities & Work</h3>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 1rem;">
