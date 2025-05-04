@@ -1,6 +1,6 @@
 - name: Raphael Rosenberg
   photo: raphael.png
-  focus: Prof. Dr. and Chair for Art History of the Renaissance, Head of CReA Lab
+  focus: Professor for Art History of the Renaissance, Head of CReA Lab
   website: https://kunstgeschichte.univie.ac.at/personen/professoreninnen/rosenberg-raphael/
   status: Current
 
@@ -66,6 +66,30 @@
 
 - name: Flóra Bakondi
   photo: flora.png
-  focus: Research assistant
+  focus: Researcher "The Museum Gaze"
   website: ""
+  status: Former
+
+- name: Hanna Brinkmann
+  photo: hanna.png
+  focus: Researcher "The Cultural Eye"
+  website: https://www.donau-uni.ac.at/de/universitaet/organisation/mitarbeiterinnen/person/4295324511
+  status: Former
+
+- name: Esther Solé i Martí
+  photo: esther.png
+  focus: Researcher Digital Humanities & Museums
+  website: https://orcid.org/0000-0002-2781-8211
+  status: Former
+
+- name: Dimitra Christidou
+  photo: dimitra.png
+  focus: Researcher Belvedere Visitracker
+  website: https://www.researchgate.net/profile/Dimitra-Christidou
+  status: Former
+
+- name: Gemma Bolognesi
+  photo: gemma.png
+  focus: Researcher Participatory Museology
+  website: https://www.imtlucca.it/en/gemma.bolognesi
   status: Former
