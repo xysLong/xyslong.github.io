@@ -19,7 +19,15 @@ So, I created a visualization to show how long it takes to reach my department b
 I used geospatial data from *Open Data Austria* and travel time estimates from the *Google Maps API*.
 The reference point for all calculations was Monday, January 13, 2025, at 9:00 AM.
 
-The full-resolution visuals can be downloaded here: [PDF (1.3 MB)](Travel_Time_20250113.pdf)
+<img src="Travel_Time_20250113-1.svg" alt="My Vector Graphic" style="width:100%; max-width:800px;">
+
+---
+
+With fewer contour levels and therefore improved readability:
+
+<img src="Travel_Time_20250113-2.svg" alt="My Vector Graphic" style="width:100%; max-width:800px;">
+
+---
 
 After spending hours finalizing the visuals, it hit me:
 commute time isn't even that important to me.
