@@ -14,8 +14,12 @@ cover:
 The University of Vienna is a large institution with a wide range of programs, initiatives, platforms, centers, hubs, etc. This abundance is sometimes so overwhelming, and many people struggle to navigate and fully understand how everything fits together. For example, I was initially very confused by the relationship between **Curriculum**, **Dissertationsgebiet** ("Field of Doctoral Research"), and **Doktoratschule** ("Doctoral School") at UniVie while preparing my PhD application. I suspect many other PhD students experience the same confusion.
 
 After receiving contradictory information from different sources for a couple of months, I decided to sit down and sort everything out. I created a [PDF (80 KB)](Doctoral_Studies_20240919.pdf) to summarize what I had learned. I shared 
-this table with Katja, the coordinator of my **Doktoratschule**, and she was thrilled with it :D Apparently, this topic is 
+this table with Katja, the coordinator of my **Doktoratschule**, and she was delighted :D Apparently, this topic is 
 notoriously complex, and no such clear overview had existed until now.
+
+<img src="Doctoral_Studies_20240919.svg" alt="My Vector Graphic" style="width:100%; max-width:800px;">
+
+---
 
 - The **Curriculum** can be seen as a generic academic framework or template. Each **Curriculum** corresponds to a 
 set of **Dissertationsgebiete**, which are similar to majors or subject areas. For example, "Cognitive Science" and "Art History" are two different **Dissertationsgebiete** that both fall under the **Curriculum** of "Humanities, Philosophy, and Education" at UniVie.
