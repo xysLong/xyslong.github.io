@@ -10,15 +10,18 @@ taxonomies:
 
 menu:
     main:
-        - name: Miscellaneous
-          url: misc/
-          weight: 5
-        - name: Location
-          url: location/
-          weight: 3
         - name: Research
           url: research/
+          weight: 1
+        - name: Miscellaneous
+          url: misc/
+          weight: 2
+        - name: Communities
+          url: communities/
           weight: 3
+        - name: Location
+          url: location/
+          weight: 4
 
 params:
     description: "I'm a PhD student in Cognitive Science at the University of Vienna."
@@ -47,21 +50,17 @@ params:
     profileMode:
           enabled: true
           title: Xingyu Long
-          subtitle: "My name is Xingyu Long (龙星羽). I'm a PhD student in Cognitive Science at the University of Vienna, where I investigate visual perception in collaboration with art historians and psychologists."
+          subtitle: "My name is Xingyu Long / 龙星羽. I'm a PhD student in Cognitive Science at the University of Vienna, where I investigate visual perception together with art historians and psychologists."
           imageUrl: "picture.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
             - name: Research
               url: research/
-            - name: Teaching
-              url: https://ufind.univie.ac.at/en/person.html?id=1012161/
-            - name: CReA Lab
-              url: https://crea.univie.ac.at/
-            - name: VDS CoBeNe
-              url: https://vds-cobene.univie.ac.at/
             - name: Miscellaneous
               url: misc/
+            - name: Communities
+              url: communities/
 
     socialIcons:
         - name: LinkedIn
