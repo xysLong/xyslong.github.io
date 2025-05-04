@@ -131,9 +131,11 @@
       <!-- For Current Members, display Head first, followed by shuffled Current Members -->
 
       <!-- Get the Head -->
-      {{ $head := first 1 (where $all "status" "Professor") }}
+      {{ $head := first 1 (where $all "status" "Raphael") }}
       <!-- Get all Current Members excluding the Head -->
       {{ $currentMembers := shuffle (where $all "status" "Current") }}
+      <!-- Get the Tail -->
+      {{ $tail := first 1 (where $all "status" "Myself") }}
 
       <!-- Display Head first -->
       {{ range $head }}
@@ -149,6 +151,16 @@
       <!-- Then display shuffled Current Members (excluding the Head) -->
       {{ range $currentMembers }}
         <div class="lab-member">
+          <a href="{{ .website }}" target="_blank" rel="noopener">
+            <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
+            <h3>{{ .name }}</h3>
+            <p>{{ .focus }}</p>
+          </a>
+        </div>
+      {{ end }}
+
+      {{ range $tail }}
+        <div class="lab-member head">
           <a href="{{ .website }}" target="_blank" rel="noopener">
             <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
             <h3>{{ .name }}</h3>
@@ -182,7 +194,8 @@
 
     // Keep the first element (Head) fixed
     const firstItem = items[0];
-    const remainingItems = items.slice(1);
+    const lastItem = items[items.length - 1];
+    const remainingItems = items.slice(1, -1);
 
     // Shuffle the remaining items
     for (let i = remainingItems.length - 1; i > 0; i--) {
@@ -194,6 +207,7 @@
     section.innerHTML = '';
     section.appendChild(firstItem);
     remainingItems.forEach(el => section.appendChild(el));
+    section.appendChild(lastItem);
   });
 </script>
 
