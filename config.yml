@@ -16,15 +16,9 @@ menu:
         - name: Stuff
           url: stuff/
           weight: 2
-        - name: Misc
-          url: misc/
-          weight: 3
-        - name: Location
-          url: location/
-          weight: 4
         - name: CReA Lab
           url: crealab/
-          weight: 5
+          weight: 3
 
 params:
     description: "I'm a PhD student in Cognitive Science at the University of Vienna."
@@ -42,7 +36,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["Research","Stuff","Misc","Location","CReA Lab"]
+    MainSections: ["Research","Stuff","CReA Lab"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -62,8 +56,6 @@ params:
               url: research/
             - name: Stuff
               url: stuff/
-            - name: Misc
-              url: misc/
             - name: CReA Lab
               url: crealab/
 
