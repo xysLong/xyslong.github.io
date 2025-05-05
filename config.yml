@@ -13,17 +13,17 @@ menu:
         - name: Research
           url: research/
           weight: 1
-        - name: CReA Lab
-          url: crealab/
-          weight: 2
         - name: Stuff
           url: stuff/
-          weight: 3
+          weight: 2
         - name: Misc
           url: misc/
-          weight: 4
+          weight: 3
         - name: Location
           url: location/
+          weight: 4
+        - name: CReA Lab
+          url: crealab/
           weight: 5
 
 params:
@@ -42,7 +42,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["Research","CReA Lab","Stuff","Misc","Location"]
+    MainSections: ["Research","Stuff","Misc","Location","CReA Lab"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -60,12 +60,12 @@ params:
           buttons:
             - name: Research
               url: research/
-            - name: CReA Lab
-              url: crealab/
             - name: Stuff
               url: stuff/
             - name: Misc
               url: misc/
+            - name: CReA Lab
+              url: crealab/
 
     socialIcons:
         - name: LinkedIn
