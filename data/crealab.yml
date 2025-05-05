@@ -64,11 +64,11 @@
   website: https://ufind.univie.ac.at/de/person.html?id=110650
   status: Main
 
-- name: Flóra Bakondi
-  photo: flora.png
-  focus: Researcher "The Museum Gaze"
-  website: ""
-  status: Associated
+# - name: Flóra Bakondi
+#   photo: flora.png
+#   focus: Researcher "The Museum Gaze"
+#   website: ""
+#   status: Associated
 
 - name: Hanna Brinkmann
   photo: hanna.png
