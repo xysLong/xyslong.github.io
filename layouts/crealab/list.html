@@ -120,24 +120,19 @@
 </style>
 
 {{ $all := site.Data.crealab }}
-{{ $statuses := slice "Current" }}
-{{ $titles := dict "Current" "Current Members" "Former" "Former Members" }}
+{{ $statuses := slice "Current" "Former" }}
+{{ $titles := dict "Current" "Lab Members" "Former" "Associated Researchers and Former Members" }}
 
 {{ range $status := $statuses }}
   <h2 class="lab-section-title">{{ index $titles $status }}</h2>
   <section class="lab-grid" id="lab-{{ $status | urlize }}">
 
     {{ if eq $status "Current" }}
-      <!-- For Current Members, display Head first, followed by shuffled Current Members -->
 
-      <!-- Get the Head -->
       {{ $head := first 1 (where $all "status" "Raphael") }}
-      <!-- Get all Current Members excluding the Head -->
-      {{ $currentMembers := shuffle (where $all "status" "Current") }}
-      <!-- Get the Tail -->
-      {{ $tail := first 1 (where $all "status" "Myself") }}
+      {{ $second := first 1 (where $all "status" "Teresa") }}
+      {{ $currentMembers := where $all "status" "Current" }}
 
-      <!-- Display Head first -->
       {{ range $head }}
         <div class="lab-member head">
           <a href="{{ .website }}" target="_blank" rel="noopener">
@@ -148,9 +143,8 @@
         </div>
       {{ end }}
 
-      <!-- Then display shuffled Current Members (excluding the Head) -->
-      {{ range $currentMembers }}
-        <div class="lab-member">
+      {{ range $second }}
+        <div class="lab-member second">
           <a href="{{ .website }}" target="_blank" rel="noopener">
             <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
             <h3>{{ .name }}</h3>
@@ -159,7 +153,23 @@
         </div>
       {{ end }}
 
-      {{ range $tail }}
+      {{ range $currentMembers }}
+        <div class="lab-member">
+          {{ $isExternal := strings.HasPrefix .website "http" }}
+          <a href="{{ .website }}" {{ if $isExternal }}target="_blank" rel="noopener" {{ end }}>
+            <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
+            <h3>{{ .name }}</h3>
+            <p>{{ .focus }}</p>
+          </a>
+        </div>
+      {{ end }}
+
+    {{ else if eq $status "Former" }}
+      {{ $head := first 1 (where $all "status" "Luise") }}
+      {{ $second := first 1 (where $all "status" "Hanna") }}
+      {{ $formerMembers := where $all "status" "Former" }}
+
+      {{ range $head }}
         <div class="lab-member head">
           <a href="{{ .website }}" target="_blank" rel="noopener">
             <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
@@ -169,11 +179,16 @@
         </div>
       {{ end }}
 
-    {{ else if eq $status "Former" }}
-      <!-- For Former Members, just shuffle the members -->
-      {{ $formerMembers := shuffle (where $all "status" "Former") }}
+      {{ range $second }}
+        <div class="lab-member second">
+          <a href="{{ .website }}" target="_blank" rel="noopener">
+            <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
+            <h3>{{ .name }}</h3>
+            <p>{{ .focus }}</p>
+          </a>
+        </div>
+      {{ end }}
 
-      <!-- Display shuffled Former Members -->
       {{ range $formerMembers }}
         <div class="lab-member">
           <a href="{{ .website }}" target="_blank" rel="noopener">
@@ -194,8 +209,8 @@
 
     // Keep the first element (Head) fixed
     const firstItem = items[0];
-    const lastItem = items[items.length - 1];
-    const remainingItems = items.slice(1, -1);
+    const secondItem = items[1];
+    const remainingItems = items.slice(2);
 
     // Shuffle the remaining items
     for (let i = remainingItems.length - 1; i > 0; i--) {
@@ -206,8 +221,8 @@
     // Re-append the first element and the shuffled remaining items
     section.innerHTML = '';
     section.appendChild(firstItem);
+    section.appendChild(secondItem);
     remainingItems.forEach(el => section.appendChild(el));
-    section.appendChild(lastItem);
   });
 </script>
 

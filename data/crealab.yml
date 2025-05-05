@@ -1,20 +1,26 @@
 - name: Raphael Rosenberg
   photo: raphael.png
-  focus: Professor of Medieval and Modern Art History
+  focus: Head of CReA lab, Professor of Medieval and Modern Art History
   website: https://kunstgeschichte.univie.ac.at/personen/professoreninnen/rosenberg-raphael/
   status: Raphael
+
+- name: Teresa Kamencek
+  photo: teresa.png
+  focus: Coordinator (interim) of CReA lab, PhD candidate "Dynamic Network & Digital Art History"
+  website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/kamencek-teresa/
+  status: Teresa
+
+- name: Luise Reitstätter
+  photo: luise.png
+  focus: Postdoc "How to Do Museum"
+  website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/reitstaetter-luise/
+  status: Luise
 
 - name: Temenuzhka Dimova
   photo: temenuzhka.png
   focus: Postdoc "Following the Festaiuolo"
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/dimova-temenuzhka/
   status: Current
-
-- name: Luise Reitstätter
-  photo: luise.png
-  focus: Postdoc "How to Do Museum"
-  website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/reitstaetter-luise/
-  status: Former
 
 - name: Zoya Dare
   photo: zoya.png
@@ -40,12 +46,6 @@
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/pesen-seda/
   status: Current
 
-- name: Teresa Kamencek
-  photo: teresa.png
-  focus: PhD candidate "Dynamic Network & Digital Art History"
-  website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/kamencek-teresa/
-  status: Current
-
 - name: Chao-Shan Hsu
   photo: chaoshan.png
   focus: PhD candidate "Culture Writes, Eye Decodes"
@@ -55,8 +55,8 @@
 - name: Xingyu Long
   photo: xingyu.png
   focus: PhD candidate "Watching in the Rhythm"
-  website: https://xyslong.github.io/crea-lab/
-  status: Myself
+  website: "/"
+  status: Current
 
 - name: Sara Leitner
   photo: sara.png
@@ -74,7 +74,7 @@
   photo: hanna.png
   focus: Researcher "The Cultural Eye"
   website: https://www.donau-uni.ac.at/de/universitaet/organisation/mitarbeiterinnen/person/4295324511
-  status: Former
+  status: Hanna
 
 - name: Esther Solé i Martí
   photo: esther.png
@@ -92,4 +92,10 @@
   photo: gemma.png
   focus: Researcher Participatory Museology
   website: https://www.imtlucca.it/en/gemma.bolognesi
+  status: Former
+
+- name: Yasaman Farhangpour
+  photo: yasaman.png
+  focus: Researcher Art History
+  website: https://independent.academia.edu/YasamanFarhangpour
   status: Former
