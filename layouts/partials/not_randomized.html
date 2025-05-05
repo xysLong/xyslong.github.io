@@ -1,0 +1,9 @@
+{{ $topNames := .names }}
+{{ $name := .name }}
+{{ $isAtTop := false }}
+{{ range $topNames }}
+  {{ if eq . $name }}
+    {{ $isAtTop = true }}
+  {{ end }}
+{{ end }}
+{{ return $isAtTop }}
