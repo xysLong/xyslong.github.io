@@ -6,108 +6,162 @@
 
 - name: Teresa Kamencek
   photo: teresa.png
-  focus: Coordinator (interim) of CReA lab, PhD candidate "Dynamic Network & Digital Art History"
+  focus: Coordinator (interim) of CReA lab, PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/kamencek-teresa/
   status: Main
 
 - name: Luise Reitstätter
   photo: luise.png
-  focus: Postdoc "How to Do Museum"
+  focus: Postdoc
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/reitstaetter-luise/
   status: Associated
 
 - name: Temenuzhka Dimova
   photo: temenuzhka.png
-  focus: Postdoc "Following the Festaiuolo"
+  focus: Postdoc
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/dimova-temenuzhka/
   status: Main
 
 - name: Zoya Dare
   photo: zoya.png
-  focus: PhD candidate "Social Media"
+  focus: PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/wissenschaftliche-mitarbeiterinnen/dare-zoya/
   status: Main
 
 - name: Anna Miscenà
   photo: anna.png
-  focus: PhD candidate "Twofoldness & Dynamic Viewing"
+  focus: PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/wissenschaftliche-mitarbeiterinnen/miscena-anna/
   status: Main
 
 - name: Carola Korhummel
   photo: carola.png
-  focus: PhD candidate "Dating in Museums"
+  focus: PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/wissenschaftliche-mitarbeiterinnen/korhummel-carola/
   status: Main
 
 - name: Seda Pesen
   photo: seda.png
-  focus: PhD candidate "The Museum Gaze"
+  focus: PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/projektmitarbeiterinnen/pesen-seda/
   status: Main
 
 - name: Chao-Shan Hsu
   photo: chaoshan.png
-  focus: PhD candidate "Culture Writes, Eye Decodes"
+  focus: PhD candidate
   website: https://kunstgeschichte.univie.ac.at/personen/wissenschaftliche-mitarbeiterinnen/hsu-chao-shan/
   status: Main
 
 - name: Xingyu Long
   photo: xingyu.png
-  focus: PhD candidate "Watching in the Rhythm"
+  focus: PhD candidate
   website: "/"
   status: Main
 
 - name: Sara Leitner
   photo: sara.png
-  focus: PhD candidate "Wokeness / Wokeless"
+  focus: PhD candidate
   website: https://ufind.univie.ac.at/de/person.html?id=110650
   status: Main
 
-# - name: Flóra Bakondi
-#   photo: flora.png
-#   focus: Researcher "The Museum Gaze"
-#   website: ""
-#   status: Associated
+- name: Flóra Bakondi
+  photo: ""
+  focus: Research Assistant
+  website: ""
+  status: Associated
 
 - name: Hanna Brinkmann
   photo: hanna.png
-  focus: Researcher "The Cultural Eye"
+  focus: Graduate
   website: https://www.donau-uni.ac.at/de/universitaet/organisation/mitarbeiterinnen/person/4295324511
   status: Associated
 
 - name: Esther Solé i Martí
   photo: esther.png
-  focus: Researcher Digital Humanities & Museums
+  focus: Guest Researcher
   website: https://orcid.org/0000-0002-2781-8211
   status: Associated
 
 - name: Dimitra Christidou
   photo: dimitra.png
-  focus: Researcher Belvedere Visitracker
+  focus: Guest Researcher
   website: https://www.researchgate.net/profile/Dimitra-Christidou
   status: Associated
 
 - name: Gemma Bolognesi
   photo: gemma.png
-  focus: Researcher Participatory Museology
+  focus: Visiting Researcher
   website: https://www.imtlucca.it/en/gemma.bolognesi
   status: Associated
 
 - name: Yasaman Farhangpour
   photo: yasaman.png
-  focus: Researcher Art History
+  focus: Visiting Researcher
   website: https://independent.academia.edu/YasamanFarhangpour
   status: Associated
 
+- name: Valentina Buljan
+  photo: valentina.png
+  focus: Research Intern
+  website: ""
+  status: Associated
+
+- name: Barbora Křížová
+  photo: barbora.png
+  focus: Research Intern
+  website: ""
+  status: Associated
+
+- name: Laura Lehni
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Kimberly Fetko
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Lena Aschauer
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Gresa Azemi
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Ina Ferlan
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
 - name: Judith Herunter
-  photo: crea_logo.png
-  focus: Looking at the gaze
+  photo: ""
+  focus: Master Candidate
   website: ""
   status: Student
 
 - name: Sophia Kury
-  photo: crea_logo.png
-  focus: Niemand zu sehen
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Ana Špacapan
+  photo: ""
+  focus: Master Candidate
+  website: ""
+  status: Student
+
+- name: Gerhard Brodnik
+  photo: ""
+  focus: Master Candidate
   website: ""
   status: Student

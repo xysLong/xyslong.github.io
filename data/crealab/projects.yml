@@ -1,0 +1,62 @@
+- title: The Museum Gaze (MUG)
+  description: Empowering Mobile Eye Tracking to Investigate Viewing Behaviour in Relation to Painting and Sculpture in Different Exhibition Displays
+  people: ["Seda Pesen", "Sara Leitner", "Luise Reitstätter", "Flóra Bakondi"]
+  image: the_museum_gaze.jpg
+  website: https://crea.univie.ac.at./projects/the-museum-gaze/
+  status: ongoing
+
+- title: ArtVis
+  description: Dynamic Network Perspectives on Digital Art History
+  people: ["Teresa Kamencek"]
+  image: artvis.png
+  website: https://crea.univie.ac.at/projects/artvis-dynamic-network-perspectives-on-digital-art-history/
+  status: ongoing
+
+- title: Following the Festaiuolo
+  description: How Do Deictic Gestures in Painting Influence the Beholder's Gaze?
+  people: ["Temenuzhka Dimova"]
+  image: following_the_festaiuolo.png
+  website: https://crea.univie.ac.at/projects/following-the-festaiuolo/
+  status: ongoing
+
+- title: Picture-Surface, Picture-Subject
+  description: Testing twofoldness in the visual perception of painting
+  people: ["Anna Miscenà"]
+  image: twofoldness.png
+  website: https://crea.univie.ac.at/projects/picture-surface-picture-subject/
+  status: ongoing
+
+- title: Museum Visitor Experience (MuVE)
+  description: What moves the eye, what moves us & how do we move in the museum space?
+  people: ["Anna Miscenà","Carola Korhummel","Zoya Dare"]
+  image: muve.png
+  website: https://crea.univie.ac.at/projects/muve-project/
+  status: ongoing
+
+- title: Dating in Museums
+  description: ""
+  people: ["Carola Korhummel"]
+  image: dating_in_museums.jpg
+  website: https://crea.univie.ac.at/projects/dating-in-museums/
+  status: ongoing
+
+- title: How to Do Museum
+  description: ""
+  people: ["Luise Reitstätter"]
+  image: how_to_do_museum.jpg
+  website: https://crea.univie.ac.at/projects/how-to-do-museum/
+  status: ongoing
+
+- title: Belvedere Before and After
+  description: ""
+  people: ["Luise Reitstätter", "Hanna Brinkmann", "Zoya Dare", "Flóra Bakondi", "Anna Miscenà"]
+  image: bba.jpg
+  website: https://crea.univie.ac.at/projects/belvedere-before-and-after/
+  status: finished
+
+- title: The Cultural Eye / The Gendered Eye
+  description: ""
+  people: ["Hanna Brinkmann", "Anna Miscenà", "Zoya Dare"]
+  image: the_cultural_eye.jpg
+  website: https://crea.univie.ac.at/projects/the-culturalgendered-eye/
+  status: finished

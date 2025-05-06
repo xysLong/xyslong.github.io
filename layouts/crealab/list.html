@@ -1,63 +1,63 @@
 {{ define "main" }}
 
 <style>
-.lab-intro-wrapper {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
+    .lab-intro-wrapper {
+        max-width: 1000px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+    }
 
-.lab-intro-header {
-    text-align: left;
-    margin-bottom: 2rem;
-}
+    .lab-intro-header {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
 
-.lab-intro-header h1 {
-    font-size: 1.75rem;
-    margin-bottom: 0.3rem;
-    color: #222;
-}
+    .lab-intro-header h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.3rem;
+        color: #222;
+    }
 
-.lab-intro-header h2 {
-    font-size: 1.25rem;
-    color: #555;
-}
+    .lab-intro-header h2 {
+        font-size: 1.25rem;
+        color: #555;
+    }
 
-.lab-intro-content {
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 2rem;
-    align-items: start;
-}
-
-.lab-intro-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
-}
-
-.lab-intro-logo {
-    text-align: center;
-}
-
-.lab-intro-logo img {
-    max-width: 100%;
-    max-height: 180px;
-    object-fit: contain;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
     .lab-intro-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        gap: 2rem;
+        align-items: start;
     }
 
     .lab-intro-text p {
-        text-align: left;
-        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #444;
     }
-}
+
+    .lab-intro-logo {
+        text-align: center;
+    }
+
+    .lab-intro-logo img {
+        max-width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .lab-intro-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .lab-intro-text p {
+            text-align: left;
+            margin-top: 1rem;
+        }
+    }
 </style>
 
 <div class="lab-intro-wrapper">
@@ -68,8 +68,10 @@
     <div class="lab-intro-content">
         <div class="lab-intro-text">
             <p>
-                The aim of the CReA lab is to expand art historical knowledge through the use of empirical and experimental methods.
-                The laboratory's projects deal with traditional art historical questions about artworks and their perception as well as transdisciplinary issues of empirical aesthetics, visual culture and museology.
+                The aim of the CReA lab is to expand art historical knowledge through the use of empirical and
+                experimental methods.
+                The laboratory's projects deal with traditional art historical questions about artworks and their
+                perception as well as transdisciplinary issues of empirical aesthetics, visual culture and museology.
             </p>
         </div>
         <div class="lab-intro-logo">
@@ -78,6 +80,30 @@
     </div>
 </div>
 
+<style>
+    .view-toggle {
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .view-toggle.active {
+        background-color: #2daa68;
+        color: white;
+        border-color: #2daa68;
+    }
+</style>
+
+
+<div style="text-align: center; margin: 2rem auto;">
+    <button id="toggle-people" class="view-toggle active">Meet Our People</button>
+    <button id="toggle-projects" class="view-toggle">See Our Projects</button>
+</div>
 
 <style>
     .lab-grid {
@@ -155,29 +181,168 @@
     }
 </style>
 
-{{ $all := site.Data.crealab.people }}
-{{ $statuses := slice "Main" "Associated" "Student" }}
-{{ $titles := dict "Main" "Lab Members" "Associated" "Associated Researchers and Former Members" "Student" "Master Candidates"}}
-{{ $namesAtTop := slice "Raphael Rosenberg" "Teresa Kamencek" "Luise Reitstätter" }}
+<div id="people-view">
+    {{ $allPeople := site.Data.crealab.people }}
+    {{ $statuses := slice "Main" "Associated" "Student" }}
+    {{ $titles := dict "Main" "Lab Members" "Associated" "Associated Researchers and Former Members" "Student" "Master Candidates"}}
+    {{ $namesAtTop := slice "Raphael Rosenberg" "Teresa Kamencek" "Luise Reitstätter" }}
 
-{{ range $status := $statuses }}
-<h2 class="lab-section-title">{{ index $titles $status }}</h2>
-<section class="lab-grid" id="lab-{{ $status | urlize }}">
+    {{ range $status := $statuses }}
+    <h2 class="lab-section-title">{{ index $titles $status }}</h2>
+    <section class="lab-grid" id="lab-{{ $status | urlize }}">
 
-    {{ range (where $all "status" $status) }}
-    {{ $isAtTop := partial "not_randomized.html" (dict "name" .name "names" $namesAtTop) }}
-    {{ $isExternal := ne .name "Xingyu Long" }}
-    <div class="lab-member" data-is-at-top="{{ $isAtTop }}">
-        <a href="{{ .website }}" {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}>
-            <img src="/images/crealab/{{ .photo }}" alt="{{ .name }}">
-            <h3>{{ .name }}</h3>
-            <p>{{ .focus }}</p>
-        </a>
+        {{ range (where $allPeople "status" $status) }}
+        {{ $isAtTop := partial "not_randomized.html" (dict "name" .name "names" $namesAtTop) }}
+        {{ $isExternal := ne .name "Xingyu Long" }}
+        <div class="lab-member" data-is-at-top="{{ $isAtTop }}" data-photo="{{ .photo }}">
+            <a href="{{ .website }}" {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}>
+                <img src="/images/crealab/people/{{ .photo }}" alt="{{ .name }}">
+                <h3>{{ .name }}</h3>
+                <p>{{ .focus }}</p>
+            </a>
+        </div>
+        {{ end }}
+
+    </section>
+    {{ end }}
+</div>
+
+<style>
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .project-entry {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .project-image:hover img {
+        transform: scale(1.1);
+    }
+
+    .project-description strong {
+        font-size: 1.2rem;
+        color: #2daa68;
+    }
+
+    .project-description p {
+        margin: 0.5rem 0 1rem;
+        font-size: 0.95rem;
+        color: #444;
+    }
+
+    .project-people-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: start;
+        justify-items: center;
+        text-align: center;
+    }
+
+
+    .project-person {
+        text-align: center;
+        font-size: 0.8rem;
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .project-person img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.3rem;
+        transition: transform 0.3s ease;
+    }
+
+    .person-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-person:hover {
+        color: #0066cc;
+    }
+
+    .project-person:hover img {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        .project-entry {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .project-people-grid {
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        }
+    }
+</style>
+
+<div id="projects-view" style="display: none;">
+    {{ $allProjects := site.Data.crealab.projects }}
+    {{ $projectStatuses := slice "ongoing" "finished" }}
+    {{ $titles := dict "ongoing" "Current Projects" "finished" "Completed Projects" }}
+
+    {{ range $pstatus := $projectStatuses }}
+    <h2 class="lab-section-title">{{ index $titles $pstatus }}</h2>
+    <div class="project-list" id="project-{{ $pstatus }}">
+
+        {{ range $project := (where $allProjects "status" $pstatus) }}
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 0 0;">
+        <div class="project-entry">
+            <div class="project-image">
+                <a href="{{ .website }}" target="_blank" rel="noopener">
+                    <img src="/images/crealab/projects/{{ $project.image }}" alt="{{ $project.name }}">
+                </a>
+            </div>
+            <div class="project-details">
+                <div class="project-description">
+                    <strong>{{ $project.title }}</strong>
+                    <p>{{ $project.description }}</p>
+                </div>
+                <div class="project-people">
+                    <div class="project-people-grid">
+                        {{ range $pname := $project.people }}
+                        {{ $p := index (where site.Data.crealab.people "name" $pname) 0 }}
+                        {{ if $p }}
+                        <a href="{{ $p.website }}" target="_blank" rel="noopener" class="project-person">
+                            <div class="person-inner">
+                                <img src="/images/crealab/people/{{ $p.photo }}" alt="{{ $p.name }}">
+                                <span>{{ $p.name }}</span>
+                            </div>
+                        </a>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 0 0;">
     </div>
     {{ end }}
-
-</section>
-{{ end }}
+</div>
 
 <script>
     document.querySelectorAll('.lab-grid').forEach(section => {
@@ -195,6 +360,65 @@
         notAtTopItems.forEach(el => section.appendChild(el));
     });
 
+    document.getElementById('toggle-people').addEventListener('click', () => {
+        document.getElementById('people-view').style.display = 'block';
+        document.getElementById('projects-view').style.display = 'none';
+        document.getElementById('toggle-people').classList.add('active');
+        document.getElementById('toggle-projects').classList.remove('active');
+    });
+
+    document.getElementById('toggle-projects').addEventListener('click', () => {
+        document.getElementById('people-view').style.display = 'none';
+        document.getElementById('projects-view').style.display = 'block';
+        document.getElementById('toggle-projects').classList.add('active');
+        document.getElementById('toggle-people').classList.remove('active');
+    });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const fallbackImages = [
+            "da_vinci_1.png",
+            "da_vinci_2.png",
+            "kahlo.png",
+            "klimt.png",
+            "munch.png",
+            "van_eyck.png",
+            "vermeer.png",
+            "whistler.png",
+            "wood_f.png",
+            "wood_m.png",
+        ];
+
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        const shuffledPortraits = shuffleArray([...fallbackImages]);
+        const assignedPortraits = {};
+        let portraitIndex = 0;
+
+        document.querySelectorAll('img').forEach(img => {
+            const src = img.getAttribute('src');
+            const alt = img.getAttribute('alt'); // person name
+            const isPeopleImage = src.includes("/images/crealab/people/");
+            const isMissingPhoto = src.endsWith("/") || src.endsWith("/.jpg") || src.endsWith("/.png") || src.endsWith("/default.png");
+
+            if (isPeopleImage && isMissingPhoto && alt) {
+                if (!assignedPortraits[alt]) {
+                    assignedPortraits[alt] = shuffledPortraits[portraitIndex % shuffledPortraits.length];
+                    portraitIndex++;
+                }
+
+                img.src = `/images/crealab/portraits/${assignedPortraits[alt]}`;
+            }
+        });
+    });
+</script>
+
 
 {{ end }}
