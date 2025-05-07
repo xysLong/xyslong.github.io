@@ -1,0 +1,87 @@
+- country: Germany
+  city: Munich
+  institution: Technical University of Munich
+  group: Human-Centered Technologies for Learning
+  lat: 48.1351
+  lon: 11.5820
+  people: ["Enkelejda Kasneci"]
+
+- country: Austria
+  city: Vienna
+  institution: University of Vienna
+  group: Empirical Visual Aesthetics
+  lat: 48.2081
+  lon: 16.3713
+  people: ["Helmut Leder"]
+
+- country: Austria
+  city: Vienna
+  institution: Vienna University of Technology
+  group: Visual Analytics Science and Technology
+  lat: 48.2081
+  lon: 16.3713
+  people: ["Silvia Miksch"]
+
+- country: United Kingdom
+  city: London
+  institution: King's College London
+  group: Work, Interaction and Technology
+  lat: 51.5072
+  lon: 0.1276
+  people: ["Dirk vom Lehn"]
+
+- country: Germany
+  city: Stuttgart
+  institution: University of Stuttgart
+  group: Art History
+  lat: 48.775
+  lon: 9.1829
+  people: ["Caecilie Weissert"]
+
+- country: Netherlands
+  city: Leiden
+  institution: University of Leiden
+  group: The Arts in Society
+  lat: 52.1636
+  lon: 4.4802
+  people: ["Arthur Crucq"]
+
+- country: Norway
+  city: Oslo
+  institution: University of Oslo
+  group: Nasjonalmuseet
+  lat: 59.9139
+  lon: 10.7522
+  people: ["Dimitra Christidou"]
+
+- country: Spain
+  city: Lleida
+  institution: University of Lleida
+  group: Art History
+  lat: 41.6168
+  lon: 0.6205
+  people: ["Esther Solé i Martí"]
+
+- country: Japan
+  city: Tokyo
+  institution: Keio University
+  group: Psychology
+  lat: 35.6764
+  lon: 139.6500
+  people: ["Hideaki Kawabata"]
+
+- country: United States of America
+  city: New York
+  institution: Columbia University
+  group: Art History
+  lat: 40.8074
+  lon: -73.9630
+  people: ["Raphael Rosenberg"]
+
+- country: Brazil
+  city: São Paulo
+  institution: University of São Paulo
+  group: Art History
+  lat: -23.5614
+  lon: -46.7308
+  people: ["Raphael Rosenberg"]

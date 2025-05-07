@@ -64,12 +64,6 @@
   website: https://ufind.univie.ac.at/de/person.html?id=110650
   status: Main
 
-- name: Flóra Bakondi
-  photo: ""
-  focus: Research Assistant
-  website: ""
-  status: Associated
-
 - name: Hanna Brinkmann
   photo: hanna.png
   focus: Graduate
@@ -109,6 +103,12 @@
 - name: Barbora Křížová
   photo: barbora.png
   focus: Research Intern
+  website: ""
+  status: Associated
+
+- name: Flóra Bakondi
+  photo: ""
+  focus: Research Assistant
   website: ""
   status: Associated
 

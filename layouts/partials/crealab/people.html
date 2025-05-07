@@ -1,0 +1,101 @@
+<style>
+    .lab-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .lab-member {
+        width: 220px;
+        text-align: center;
+        transition: color 0.3s ease;
+    }
+
+    .lab-member a {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lab-member img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.6rem;
+        transition: transform 0.3s ease;
+    }
+
+    .lab-member h3 {
+        color: #2daa68;
+        margin: 0.2rem 0 0.2rem;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .lab-member p {
+        font-size: 0.8rem;
+        margin: 0;
+        transition: color 0.3s ease;
+    }
+
+    .lab-member:hover h3,
+    .lab-member:hover p {
+        color: #0066cc;
+    }
+
+    .lab-member:hover img {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        .lab-grid {
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+
+        .lab-member {
+            width: 180px;
+        }
+
+        .lab-member img {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    .lab-section-title {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+</style>
+
+<div id="people-view">
+    {{ $allPeople := site.Data.crealab.people }}
+    {{ $statuses := slice "Main" "Associated" "Student" }}
+    {{ $titles := dict "Main" "Lab Members" "Associated" "Associated Researchers and Former Members" "Student" "Master Candidates"}}
+    {{ $namesAtTop := slice "Raphael Rosenberg" "Teresa Kamencek" "Luise Reitstätter" }}
+
+    {{ range $status := $statuses }}
+    <h2 class="lab-section-title">{{ index $titles $status }}</h2>
+    <section class="lab-grid" id="lab-{{ $status | urlize }}">
+
+        {{ range (where $allPeople "status" $status) }}
+        {{ $isAtTop := partial "not_randomized.html" (dict "name" .name "names" $namesAtTop) }}
+        {{ $isExternal := ne .name "Xingyu Long" }}
+        <div class="lab-member" data-is-at-top="{{ $isAtTop }}" data-photo="{{ .photo }}">
+            <a href="{{ .website }}" {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}>
+                <img src="/images/crealab/people/{{ if .photo }}{{ .photo }}{{ else }}default.png{{ end }}" alt="{{ .name }}">
+                <h3>{{ .name }}</h3>
+                <p>{{ .focus }}</p>
+            </a>
+        </div>
+        {{ end }}
+
+    </section>
+    {{ end }}
+</div>
