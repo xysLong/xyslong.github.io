@@ -1,0 +1,384 @@
+{
+  "Austria": {
+    "Vienna": {
+      "lat": 48.2081,
+      "lon": 16.3713,
+      "institutions": [
+        {
+          "name": "University of Vienna",
+          "group": "Vienna Cognitive Science Hub",
+          "people": [
+            "József Arató"
+          ]
+        },
+        {
+          "name": "University of Vienna",
+          "group": "Empirical Visual Aesthetics",
+          "people": [
+            "Helmut Leder"
+          ]
+        },
+        {
+          "name": "Vienna University of Technology",
+          "group": "Visual Analytics Science and Technology",
+          "people": [
+            "Silvia Miksch"
+          ]
+        }
+      ]
+    },
+    "Krems": {
+      "lat": 48.4112,
+      "lon": 15.6071,
+      "institutions": [
+        {
+          "name": "Universität für Weiterbildung Krems",
+          "group": "Zentrum für Kulturen und Technologien des Sammelns",
+          "people": [
+            "Hanna Brinkmann"
+          ]
+        }
+      ]
+    }
+  },
+  "Germany": {
+    "Munich": {
+      "lat": 48.1351,
+      "lon": 11.582,
+      "institutions": [
+        {
+          "name": "Technical University of Munich",
+          "group": "Human-Centered Technologies for Learning",
+          "people": [
+            "Enkelejda Kasneci"
+          ]
+        }
+      ]
+    },
+    "Stuttgart": {
+      "lat": 48.775,
+      "lon": 9.1829,
+      "institutions": [
+        {
+          "name": "University of Stuttgart",
+          "group": "Art History",
+          "people": [
+            "Caecilie Weissert"
+          ]
+        }
+      ]
+    },
+    "Lüneburg": {
+      "lat": 53.2479,
+      "lon": 10.4161,
+      "institutions": [
+        {
+          "name": "Leuphana Universität Lüneburg",
+          "group": "Media Cultures of Computer Simulation",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    }
+  },
+  "Switzerland": {
+    "Zurich": {
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "institutions": [
+        {
+          "name": "Universität Zürich",
+          "group": "Moderne und zeitgenössische Kunst",
+          "people": [
+            "Rosa Sancarlo"
+          ]
+        },
+        {
+          "name": "Universität Bern",
+          "group": "Eye Movement Research",
+          "people": [
+            "Rudolf Groner"
+          ]
+        }
+      ]
+    }
+  },
+  "United Kingdom": {
+    "London": {
+      "lat": 51.5072,
+      "lon": 0.1276,
+      "institutions": [
+        {
+          "name": "King's College London",
+          "group": "Work, Interaction and Technology",
+          "people": [
+            "Dirk vom Lehn"
+          ]
+        }
+      ]
+    }
+  },
+  "Netherlands": {
+    "Leiden": {
+      "lat": 52.1636,
+      "lon": 4.4802,
+      "institutions": [
+        {
+          "name": "University of Leiden",
+          "group": "The Arts in Society",
+          "people": [
+            "Arthur Crucq"
+          ]
+        }
+      ]
+    }
+  },
+  "Norway": {
+    "Oslo": {
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "institutions": [
+        {
+          "name": "University of Oslo",
+          "group": "Nasjonalmuseet",
+          "people": [
+            "Dimitra Christidou"
+          ]
+        }
+      ]
+    }
+  },
+  "France": {
+    "Paris": {
+      "lat": 48.8575,
+      "lon": 2.3514,
+      "institutions": [
+        {
+          "name": "Collège de France",
+          "group": "Art History",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    },
+    "Lille": {
+      "lat": 50.6244,
+      "lon": 3.0679,
+      "institutions": [
+        {
+          "name": "Université de Lille",
+          "group": "Art History",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    },
+    "Strasbourg": {
+      "lat": 48.5734,
+      "lon": 7.7521,
+      "institutions": [
+        {
+          "name": "Université de Strasbourg",
+          "group": "Art History",
+          "people": [
+            "Temenuzhka Dimova"
+          ]
+        }
+      ]
+    }
+  },
+  "Spain": {
+    "Lleida": {
+      "lat": 41.6168,
+      "lon": 0.6205,
+      "institutions": [
+        {
+          "name": "University of Lleida",
+          "group": "Art History",
+          "people": [
+            "Esther Solé i Martí"
+          ]
+        }
+      ]
+    }
+  },
+  "Japan": {
+    "Tokyo": {
+      "lat": 35.6764,
+      "lon": 139.65,
+      "institutions": [
+        {
+          "name": "慶應義塾大学 Keio University",
+          "group": "Psychology",
+          "people": [
+            "Hideaki Kawabata"
+          ]
+        },
+        {
+          "name": "東京大学 The University of Tokyo",
+          "group": "Humanities and Sociology",
+          "people": [
+            "Takumi Tanaka"
+          ]
+        }
+      ]
+    }
+  },
+  "United States of America": {
+    "New York": {
+      "lat": 40.8074,
+      "lon": -73.963,
+      "institutions": [
+        {
+          "name": "Columbia University",
+          "group": "Italian Academy",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    }
+  },
+  "Brazil": {
+    "São Paulo": {
+      "lat": -23.5614,
+      "lon": -46.7308,
+      "institutions": [
+        {
+          "name": "University of São Paulo",
+          "group": "Art History",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    }
+  },
+  "Italy": {
+    "Rome": {
+      "lat": 41.8967,
+      "lon": 12.4822,
+      "institutions": [
+        {
+          "name": "Galleria Borghese",
+          "group": "Marble",
+          "people": [
+            "Raphael Rosenberg"
+          ]
+        }
+      ]
+    },
+    "Lucca": {
+      "lat": 43.843,
+      "lon": 10.5157,
+      "institutions": [
+        {
+          "name": "Scuola IMT Alti Studi Lucca",
+          "group": "Museum Studies",
+          "people": [
+            "Gemma Bolognesi"
+          ]
+        }
+      ]
+    },
+    "Florence": {
+      "lat": 43.7700,
+      "lon": 11.2577,
+      "institutions": [
+        {
+          "name": "Università di Firenze",
+          "group": "Art History",
+          "people": [
+            "Yasaman Farhangpour"
+          ]
+        }
+      ]
+    }
+  },
+  "Hungary": {
+    "Budapest": {
+      "lat": 47.4979,
+      "lon": 19.0402,
+      "institutions": [
+        {
+          "name": "Eötvös Loránd University Budapest",
+          "group": "Middle European interdisciplinary master's programme in Cognitive Science (MEi:CogSci)",
+          "people": []
+        }
+      ]
+    }
+  },
+  "Slovenia": {
+    "Ljubljana": {
+      "lat": 46.0569,
+      "lon": 14.5058,
+      "institutions": [
+        {
+          "name": "University of Ljubljana",
+          "group": "Middle European interdisciplinary master's programme in Cognitive Science (MEi:CogSci)",
+          "people": []
+        }
+      ]
+    }
+  },
+  "Slovakia": {
+    "Bratislava": {
+      "lat": 48.1486,
+      "lon": 17.1077,
+      "institutions": [
+        {
+          "name": "Comenius University in Bratislava",
+          "group": "Middle European interdisciplinary master's programme in Cognitive Science (MEi:CogSci)",
+          "people": []
+        }
+      ]
+    }
+  },
+  "Czechia": {
+    "Olomouc": {
+      "lat": 49.5938,
+      "lon": 17.2509,
+      "institutions": [
+        {
+          "name": "Univerzita Palackého v Olomouci",
+          "group": "Art History",
+          "people": ["Barbora Křížová"]
+        }
+      ]
+    }
+  },
+  "China": {
+    "Shanghai": {
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "institutions": [
+        {
+          "name": "复旦大学 Fudan University",
+          "group": "Philosophy of Art",
+          "people": [
+            "Raphael Rosenberg",
+            "Shen Yubing"
+          ]
+        }
+      ]
+    }
+  },
+  "Taiwan": {
+    "Taoyuan": {
+      "lat": 24.9925,
+      "lon": 121.3060,
+      "institutions": [
+        {
+          "name": "國立中央大學 National Central University",
+          "group": "Visual Culture",
+          "people": [
+            "Chao-Shan Hsu"
+          ]
+        }
+      ]
+    }
+  }
+}

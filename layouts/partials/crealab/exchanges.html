@@ -29,26 +29,22 @@
         stroke: #d3d3d3;
         stroke-width: 2;
         opacity: 0.9;
-        transition: all 0.3s ease;
         fill: none;
-    }
-
-    .connection-line.active {
-        stroke: #2ca02c;
-        stroke-width: 4;
-        opacity: 1;
+        vector-effect: non-scaling-stroke;
     }
 
     .city-marker {
-        fill: #2ca02c;
+        fill: #2780d6;
         stroke: #fff;
         stroke-width: 1;
+        vector-effect: non-scaling-stroke;
     }
 
     .vienna-marker {
         fill: #d62728;
         stroke: #fff;
         stroke-width: 1.5;
+        vector-effect: non-scaling-stroke;
     }
 
     #geo-tooltip {
@@ -56,11 +52,6 @@
         max-width: 320px;
         pointer-events: none;
         transition: opacity 0.2s ease;
-    }
-
-    .tooltip-city {
-        color: #d62728;
-        font-weight: 500;
     }
 
     .tooltip-institution {
