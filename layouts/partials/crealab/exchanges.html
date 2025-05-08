@@ -1,5 +1,19 @@
 <div id="exchanges-view" style="display: none;">
-    <svg id="collab-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
+    <svg id="collab-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet">
+        <div id="geo-tooltip"
+             style="position: absolute; display: none;
+            border-radius: 8px; padding: 1rem;
+            background: rgba(255, 255, 255, 0.93);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 1px solid #2ca02c55;
+            backdrop-filter: blur(2px);
+            font-family: 'Segoe UI', sans-serif;
+            color: #363636;">
+            <div id="tooltip-header" style="font-size: 1.1rem; margin-bottom: 0.5rem;
+                                  color: #2ca02c; font-weight: 500;"></div>
+            <div id="tooltip-content" style="font-size: 0.95rem; line-height: 1.4;"></div>
+        </div>
+    </svg>
 </div>
 
 <style>
@@ -54,6 +68,28 @@
         stroke: #fff;
         stroke-width: 1.5;
     }
+
+    #geo-tooltip {
+        min-width: 280px;
+        max-width: 320px;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .tooltip-city {
+        color: #d62728;
+        font-weight: 500;
+    }
+
+    .tooltip-institution {
+        color: #636363;
+        font-size: 0.9em;
+    }
+
+    .tooltip-divider {
+        border-bottom: 1px solid #2ca02c33;
+        margin: 0.5rem 0;
+    }
 </style>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -69,6 +105,8 @@
     const path = d3.geoPath().projection(projection);
 
     const viennaCoords = [16.3738, 48.2082];
+    const nigerCoords = projection([2.1, -70]);  // Top-left anchor (Niger region)
+    const indochinaCoords = projection([107.0, -70]); // Top-right anchor (Indochina)
     const collabs = {{ site.Data.crealab.exchanges | jsonify | safeJS }};
 
     Promise.all([
@@ -93,7 +131,7 @@
                 ? "country highlighted"
                 : "country")
             .attr("d", path)
-            .on("mouseover", function(event, d) {
+            .on("mouseover", function (event, d) {
                 if (!countryConnections.has(d.properties.name)) return;
 
                 // Highlight country
@@ -102,8 +140,10 @@
                 // Highlight corresponding connections
                 connections.selectAll(`.connection-line[data-country="${d.properties.name}"]`)
                     .classed("active", true);
+
+                showTooltip(event, d);
             })
-            .on("mouseout", function(event, d) {
+            .on("mouseout", function (event, d) {
                 if (!countryConnections.has(d.properties.name)) return;
 
                 // Reset country color
@@ -112,6 +152,8 @@
                 // Reset connections
                 connections.selectAll(`.connection-line[data-country="${d.properties.name}"]`)
                     .classed("active", false);
+
+                hideTooltip();
             });
 
         // Draw subtle connection lines first
@@ -149,4 +191,40 @@
 
     // Ensure lines don't block hover
     d3.selectAll(".connection-line").style("pointer-events", "none");
+
+    function showTooltip(event, d) {
+        const countryName = d.properties.name;
+        const matches = collabs.filter(c => c.country === countryName);
+        if (matches.length === 0) return;
+
+        const tooltip = d3.select("#geo-tooltip");
+        const header = tooltip.select("#tooltip-header");
+        const content = tooltip.select("#tooltip-content");
+
+        // Position tooltip between geographic anchors
+        tooltip.style("left", `${nigerCoords[0]}px`)
+            .style("top", `${nigerCoords[1]}px`)
+            .style("width", `${indochinaCoords[0] - nigerCoords[0]}px`)
+            .style("display", "block");
+
+        // Build content with matching color scheme
+        header.html(`<span style="color:#2ca02c">${countryName}</span> Collaborations`);
+
+        const contentHtml = matches.map(c => `
+        <div class="tooltip-entry" style="margin: 0.3rem 0;">
+            <span class="tooltip-city">${c.city}</span>
+            <div class="tooltip-institution">${c.institution}</div>
+            ${c.group ? `<div class="tooltip-group" style="color:#636363; font-size:0.85em;">${c.group}</div>` : ''}
+        </div>
+    `).join('<div class="tooltip-divider"></div>');
+
+        content.html(contentHtml);
+
+    }
+
+    function hideTooltip() {
+        d3.select("#geo-tooltip").style("display", "none");
+        svg.selectAll(".tooltip-connector").remove();
+    }
 </script>
+
