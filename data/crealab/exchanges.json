@@ -240,6 +240,19 @@
           ]
         }
       ]
+    },
+    "Boston": {
+      "lat": 42.3611,
+      "lon": -71.0571,
+      "institutions": [
+        {
+          "name": "Massachusetts Institute of Technology",
+          "group": "Design Computation",
+          "people": [
+            "Bailey Fernandez"
+          ]
+        }
+      ]
     }
   },
   "Brazil": {
